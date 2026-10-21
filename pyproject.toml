@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "csv-rescue-cn"
+version = "0.1.0"
+description = "Fix garbled CSV files from legacy Chinese systems: auto-detect GBK/GB18030/Big5/UTF-8 and rewrite as clean UTF-8"
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.9"
+authors = [{ name = "sgl022320-alt" }]
+keywords = ["csv", "encoding", "gbk", "gb18030", "mojibake", "utf-8", "chinese"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Topic :: Text Processing",
+  "Natural Language :: Chinese (Simplified)",
+]
+
+[project.scripts]
+csv-rescue = "csv_rescue_cn.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/sgl022320-alt/csv-rescue-cn"
+
+[tool.setuptools.packages.find]
+where = ["src"]
